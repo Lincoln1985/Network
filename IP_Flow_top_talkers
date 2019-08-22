@@ -1,0 +1,11 @@
+Config t
+!“int gi0/2” <-- Interface a ser monitorada!
+ip flow egress
+ip flow ingress
+exit
+ip flow-top-talkers
+cache-timeout 3000
+top 10
+sort-by bytes
+end
+show ip flow top-talkers
